@@ -1,0 +1,91 @@
+* {
+    font-family: "Calibri Light"; /* Establece la fuente "Calibri Light" para todos los elementos */
+}
+
+.rojo {
+    color: darkred; /* Cambia el color del texto a rojo oscuro para elementos con la clase "rojo" */
+}
+
+.texto-azul {
+    color: blue; /* Cambia el color del texto a azul para elementos con la clase "texto-azul" */
+}
+
+.boton {
+    padding: 15px 30px; /* Añade espacio interno (padding) al botón: 15px arriba y abajo, 30px a los lados */
+}
+
+.boton.derecha {
+    background-color: #960e1e; /* Establece el color de fondo rojo oscuro para botones con la clase "derecha" */
+}
+
+.boton.izquierda {
+    background-color: aqua; /* Establece el color de fondo aqua para botones con la clase "izquierda" */
+}
+
+.boton:hover {
+    background-color: #ffffff; /* Cambia el color de fondo a blanco cuando el botón se pasa con el ratón */
+    border: 1px solid black; /* Añade un borde negro de 1px al botón cuando se pasa con el ratón */
+    color: black; /* Cambia el color del texto a negro cuando se pasa con el ratón */
+    cursor: pointer; /* Cambia el cursor a una mano (indicando que es clicable) cuando se pasa con el ratón */
+}
+
+.container {
+    display: flex; /* Utiliza flexbox para el diseño del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    flex-direction: column; /* Coloca los elementos dentro del contenedor en una columna */
+}
+
+#registroForm {
+    display: flex; /* Utiliza flexbox para el diseño del formulario */
+    flex-direction: column; /* Coloca los elementos del formulario en una columna */
+    max-width: 600px; /* Establece el ancho máximo del formulario a 600px */
+    margin: auto; /* Centra el formulario horizontalmente dentro de su contenedor padre */
+}
+
+.form-group {
+    display: flex; /* Utiliza flexbox para el diseño del grupo de formulario */
+    align-items: center; /* Centra verticalmente los elementos dentro del grupo de formulario */
+    margin-bottom: 15px; /* Añade un margen inferior de 15px a cada grupo de formulario */
+}
+
+.form-group label {
+    flex: 1; /* Establece el tamaño del label para ocupar 1 parte del espacio disponible */
+    min-width: 150px; /* Establece un ancho mínimo de 150px para el label */
+}
+
+.form-group input {
+    flex: 2; /* Establece el tamaño del input para ocupar 2 partes del espacio disponible */
+    padding: 5px; /* Añade un padding de 5px al input */
+}
+
+form {
+    max-width: 600px; /* Establece el ancho máximo del formulario a 600px */
+    margin: 20px auto; /* Añade un margen vertical de 20px y centra horizontalmente el formulario */
+    background-color: #fff; /* Establece el color de fondo del formulario a blanco */
+    padding: 20px; /* Añade un padding de 20px al formulario */
+    border-radius: 8px; /* Redondea las esquinas del formulario con un radio de 8px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra alrededor del formulario */
+}
+
+.derecha {
+    float: right; /* Flota el elemento a la derecha */
+}
+
+.izquierda {
+    float: left; /* Flota el elemento a la izquierda */
+}
+
+.borrarFloat {
+    clear: both; /* Limpia los floats, evitando que otros elementos se envuelvan alrededor */
+}
+
+.error {
+    color: #960e1e; /* Establece el color del texto de error a aqua */
+    font-size: 10px; /* Establece el tamaño de la fuente de error a 10px */
+    font-style: italic; /* Establece el estilo de la fuente de error a itálico */
+}
+
+.errorInput {
+    border: 2px solid darkred; /* Establece un borde rojo oscuro de 2px alrededor de los inputs con errores */
+}
