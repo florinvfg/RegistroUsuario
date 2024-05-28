@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     form.edad.addEventListener('input', validarEdad);
     form.telefono.addEventListener('input', validarTelefono);
     form.email.addEventListener('input', validarEmail);
+    form.password1.addEventListener('input', validarPass1);
+    form.password2.addEventListener('input', validarPass2)
 });
 
 function validarNombre() {//validamos que no este vacio el nombre
@@ -117,8 +119,50 @@ function validarEmail() {
         return true;
     }
 }
+
+function validarPass1(){
+    let pass1 = document.querySelector('#password1');
+    let msnError = document.querySelector('.pass1Error');
+
+    if (!pass1.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)){
+        pass1.classList.add("errorInput");
+        pass1.classList.remove('validoInput');
+        msnError.textContent = 'La contraseña una longtud minima de 8 caracteres: al menos 1 mayúscula, 1 minúscula, 1 número.';
+        return false;
+    }else {
+        pass1.classList.remove('error-input');
+        pass1.classList.add('validoInput');
+        msnError.textContent = '';
+        return true;
+    }
+
+}
+
+function validarPass2() {
+    let pass1 = document.querySelector('#password1');
+    let pass2 = document.querySelector('#password2');
+    let msnError = document.querySelector('.pass2Error');
+
+    if (pass1.value!==pass2.value){
+        pass1.classList.remove('error-input');
+        pass1.classList.add('validoInput');
+        pass2.classList.remove('error-input');
+        pass2.classList.add('validoInput');
+        msnError.textContent = 'Las contraseñas no son iguales';
+        return false;
+    }else {
+        pass2.classList.remove('error-input');
+        pass2.classList.add('validoInput');
+        pass1.classList.remove('error-input');
+        pass1.classList.add('validoInput');
+        msnError.textContent = '';
+        return true;
+    }
+}
 function validarFomulario() {
-    if (validarNombre() && validarApellido() && validarEdad() && validarTelefono() && validarEmail())
+    if (validarNombre() && validarApellido() && validarEdad()
+        && validarTelefono() && validarEmail() && validarPass1()
+        && validarPass2())
         return true;
     else
         return false;
