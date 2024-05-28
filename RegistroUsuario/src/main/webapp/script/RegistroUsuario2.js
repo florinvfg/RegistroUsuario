@@ -16,6 +16,8 @@ function validarFomulario(){
     //recorre el array y elimina esa clase errorInput si esta.
     inputs.forEach( input=>input.classList.remove("errorInput"));
 
+
+
     //Validar campos trim quita los espacios vacios  de los extremos ej: _florin_
     if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(nombre.value.trim())){
         errorMsn+="El nombre es obligatorio<br>";

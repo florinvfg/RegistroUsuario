@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="script/RegistroUsuario3.js"></script>
-    <title>📌Registro de Usuario</title>
+    <title>📌Registro de Usuario 3</title>
 </head>
 <body>
 <div class="container">
@@ -21,24 +21,28 @@
         <p class="form-group ">
             <label for="nombre" >Nombre<span class="rojo">*</span>:</label>
             <input type="text" id="nombre" name="nombre">
-        <p class="nombreError rojo"></p>
+
         </p>
+        <div class="nombreError rojo msn"></div>
         <p class="form-group ">
             <label for="apellido" >Apellidos<span class="rojo">*</span>:</label>
             <input type="text" id="apellido" name="apellido">
-        <p class="apellidoError rojo"></p>
+
         </p>
+        <div class="apellidoError rojo msn"></div>
         <p class="form-group ">
             <label for="edad">Edad<span class="rojo">*</span>:</label>
             <input type="number" id="edad" name="edad">
-        <p class="edadError rojo"></p>
+
         </p>
+        <div class="edadError rojo msn"></div>
         </p>
         <p class="form-group ">
             <label for="telefono">Teléfono<span class="rojo">*</span>:</label>
             <input type="text" id="telefono" name="telefono">
-            <p class="apellidoError rojo"></p>
+
         </p>
+        <div class="telefonoError rojo msn"></div>
         </p>
         <p class="form-group ">
             <label for="direccion">Dirección:</label>
@@ -47,22 +51,31 @@
         <p class="form-group ">
             <label for="email">Email<span class="rojo">*</span>:</label>
             <input type="email" id="email" name="email">
-        <p class="emailError rojo"></p>
+
         </p>
+        <div class="emailError rojo msn"></div>
         <p class="form-group ">
             <label for="password1">Contraseña<span class="rojo">*</span>:</label>
             <input type="password" name="password1" id="password1">
-        <p class="pass1Error rojo"></p>
+
         </p>
+        <div class="password1Error rojo msn"></div>
         <p class="form-group ">
             <label for="password2">Repetir Contraseña<span class="rojo">*</span>:</label>
             <input type="password" name="password2" id="password2">
-        <p class="pass2Error rojo"></p>
+
+        </p>
+        <div class="password2Error rojo msn"></div>
+        <p>
+            <input type="submit" value="Registrar" class="boton izquierda" id="reset">
+            <input type="reset" value="Borrar" class="boton derecha">
         </p>
 
         <p>
-            <input type="submit" value="Registrar" class="boton izquierda">
-            <input type="reset" value="Borrar" class="boton derecha">
+
+            <a href="index.jsp">Index1</a>
+            <a href="index2.jsp">Index2</a>
+            <a href="index3.jsp">Index3</a>
         </p>
         <p class="error"></p>
     </form>

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="script/RegistroUsuario2.js"></script>
-    <title>📌Registro de Usuario</title>
+    <title>📌Registro de Usuario 2</title>
 </head>
 <body>
 <div class="container">
@@ -54,6 +54,12 @@
         <p>
             <input type="submit" value="Registrar" class="boton izquierda">
             <input type="reset" value="Borrar" class="boton derecha">
+        </p>
+        <p>
+
+            <a href="index.jsp">Index1</a>
+            <a href="index2.jsp">Index2</a>
+            <a href="index3.jsp">Index3</a>
         </p>
         <p class="error"></p>
     </form>

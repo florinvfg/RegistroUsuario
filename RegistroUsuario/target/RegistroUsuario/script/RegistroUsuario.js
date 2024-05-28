@@ -16,6 +16,7 @@ function validarFormulario(){
     let errorMsn=document.querySelector(".error");
     errorMsn.textContent="";
 
+
     //limpiar los estilos de los input
 
     let inputs=document.querySelectorAll("input");
