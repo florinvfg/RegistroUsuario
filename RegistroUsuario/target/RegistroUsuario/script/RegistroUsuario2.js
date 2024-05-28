@@ -1,9 +1,4 @@
-window.onload=function (){
-    let formulario=document.querySelector("#registroForm")//objeto
-    formulario.addEventListener("submit",validarFormulario);
-
-}
-function validarFormulario(){
+function validarFomulario(){
     let form=document.getElementById("registroForm")
     let nombre=form.nombre;
     let apellido=form.apellido;
@@ -16,60 +11,52 @@ function validarFormulario(){
     let salida=document.querySelector(".error");
     let errorMsn="";
     let fallo=false;
-
-    //limpiar los estilos de los input
-
+//limpiar los estilos de los input
     let inputs=document.querySelectorAll("input");
-    //recore el array y elimina esa clase errorInput si esta
-    inputs.forEach(input=>input.classList.remove("errorInput"));
+    //recorre el array y elimina esa clase errorInput si esta.
+    inputs.forEach( input=>input.classList.remove("errorInput"));
 
-    //validar campos trin quita espacios vacios de los extremos
+    //Validar campos trim quita los espacios vacios  de los extremos ej: _florin_
     if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(nombre.value.trim())){
-        errorMsn+="El nombre es obligatorio";
+        errorMsn+="El nombre es obligatorio<br>";
         nombre.classList.add("errorInput");//que se ponga el borde en rojo
-       fallo= true;
-
+        fallo=true;
     }
     if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(apellido.value.trim())){
-        errorMsn+="El apellido es obligatoriobrbr<br>";
+        errorMsn+="El apellido es obligatorio<br>";
         apellido.classList.add("errorInput");//que se ponga el borde en rojo
-        fallo= true;
-
+        fallo=true;
     }
-    if (!edad.value.trim() || isNaN(edad.value) || edad.value <= 0 ) {
-        errorMsn += "La edad es obligatoria y debe ser un número positivo.<br>";
-        edad.classList.add("errorInput"); // Añade la clase para resaltar el campo con borde rojo
-        fallo= true;
+    if (!edad.value.trim() || isNaN(edad.value) || edad.value<=0){
+        errorMsn+="La edad es obligatoria, solo números y positivos<br>";
+        edad.classList.add("errorInput");//que se ponga el borde en rojo
+        fallo=true;
     }
-
-    if (!telefono.value.match(/^\d{9}$/)) {
-        errorMsn += "El teléfono es obligatorio y debe contener 9 dígitos.<br>";
-        telefono.classList.add("errorInput"); // Añade la clase para resaltar el campo con borde rojo
-        fallo= true;
+    if (!telefono.value.match(/^\d{9}$/)){
+        errorMsn+="El teléfono debe contener 9 dígitos<br>";
+        telefono.classList.add("errorInput");//que se ponga el borde en rojo
+        fallo=true;
     }
-    if (!email.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/)) {
-        errorMsn += "El email debe ser en formato correcto.<br>";
-        email.classList.add("errorInput"); // Añade la clase para resaltar el campo con borde rojo
-        fallo= true;
+    if (!email.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/)){
+        errorMsn+="El email debe ser en formato correcto<br>";
+        email.classList.add("errorInput");//que se ponga el borde en rojo
+        fallo=true;
     }
     if(pass1.value.trim()!==pass2.value.trim()){
-        errorMsn += "La contraseña y repetir contraseña debe ser iguales<br>";
-        pass1.classList.add("errorInput"); // Añade la clase para resaltar el campo con borde rojo
-        pass2.classList.add("errorInput");
-        fallo= true;
-    }else if(!pass1.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)){
-        errorMsn+= "La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula, y un número.<br>";
-        pass1.classList.add("errorInput"); // Añade la clase para resaltar el campo con borde rojo
-        pass2.classList.add("errorInput");
-        fallo= true;
+        errorMsn+="La contraseña y repetir contraseña deben ser iguales<br>";
+        pass1.classList.add("errorInput");//que se ponga el borde en rojo
+        pass2.classList.add("errorInput");//que se ponga el borde en rojo
+        fallo=true;
+    }else if (!pass1.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)){
+        errorMsn+="La contraseña una longtud minima de 8 caracteres: al menos 1 mayúscula, 1 minúscula, 1 número<br>";
+        pass1.classList.add("errorInput");//que se ponga el borde en rojo
+        pass2.classList.add("errorInput");//que se ponga el borde en rojo
+        fallo=true;
     }
     if (fallo){
-      salida.innerHTML=errorMsn;
-      return false;
+        salida.innerHTML=errorMsn;
+        return false;
     }else {
         return true;
     }
-    return true;
-
-
 }

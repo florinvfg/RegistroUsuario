@@ -23,42 +23,50 @@
         <p class="form-group">
             <label for="nombre" class="texto-azul">Nombre <span class="rojo">*</span>:</label>
         <input type="text" id="nombre" name="nombre"></input>
+            <p class="nombreError rojo"></p>
         </p>
 
         <p class="form-group">
             <label for="apellido" class="texto-azul">Apellidos <span class="rojo">*</span>:</label>
             <input type="text" id="apellido" name ="apellido"></input>
+            <p class="apellidoError rojo"></p>
         </p>
         <p class="form-group">
             <label for="edad"  class="texto-azul">Edad <span class="rojo">*</span>:</label>
             <input type="number" id="edad" name="edad">
+            <p class="edadError rojo"></p>
         </p>
 
         <p class="form-group">
             <label for="telefono"  class="texto-azul">Telefono <span class="rojo">*</span>:</label>
             <input type="text" id="telefono" name="telefono">
+            <p class="telefonoError rojo"></p>
         </p>
 
 
         <p class="form-group">
             <label for="direccion"  class="texto-azul">Direccion<span class="rojo">*</span>:</label>
             <input type="text" id="direccion" name="direccion">
+            <p class="direccionError rojo"></p>
         </p>
 
 
         <p class="form-group">
             <label for="email"  class="texto-azul">Email<span class="rojo">*</span>:</label>
             <input type="text" id="email" name="email">
+            <p class="emailError rojo"></p>
         </p>
 
         <p class="form-group">
             <label for="password1" class="texto-azul">Contraseña<span class="rojo">*</span>:</label>
             <input type="text" id="password1" name="password1">
+            <p class="contraseñaError rojo"></p>
         </p>
 
         <p class="form-group">
             <label for="password2"  class="texto-azul">Repetir Contraseña<span class="rojo">*</span>:</label>
             <input type="text" id="password2" name="password2">
+            <p class="repetirContraseñaError rojo"></p>
         </p>
 
         <p >

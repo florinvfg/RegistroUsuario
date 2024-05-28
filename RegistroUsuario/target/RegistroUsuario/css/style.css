@@ -89,3 +89,6 @@ form {
 .errorInput {
     border: 2px solid darkred; /* Establece un borde rojo oscuro de 2px alrededor de los inputs con errores */
 }
+.validoInput{
+    border: 2px solid green;
+}
